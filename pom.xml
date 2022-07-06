@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <cucumber>6.8.1</cucumber>
     </properties>
 
     <dependencies>
@@ -33,17 +34,17 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>6.8.1</version>
+            <version>${cucumber}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>6.8.1</version>
+            <version>${cucumber}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>6.8.1</version>
+            <version>${cucumber}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -53,7 +54,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm</artifactId>
-            <version>6.8.1</version>
+            <version>${cucumber}</version>
             <type>pom</type>
         </dependency>
         <dependency>
