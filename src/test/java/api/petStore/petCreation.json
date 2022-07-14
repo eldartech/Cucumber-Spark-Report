@@ -1,0 +1,22 @@
+{
+  "id": 123,
+  "category": {
+    "id": 0,
+    "name": "retriever"
+  },
+  "name": "Bobo",
+  "photoUrls": [
+    "https://thumbs.dreamstime.com/z/pair-puppy-dogs-golden-retriever-breed-adorable-golden-retriver-breed-puppies-adorable-golden-retriver-breed-puppies-144475273.jpg"
+  ],
+  "tags": [
+    {
+      "id": 2,
+      "name": "static"
+    },
+    {
+      "id": 3,
+      "name": "random"
+    }
+  ],
+  "status": "dead"
+}

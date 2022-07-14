@@ -189,6 +189,15 @@ public class WebOrderHomePageStep {
             row.getCell(i).setCellValue(webOrderHomePage.columnNames.get(i).getText());
         }
 
+        for (int r=2,i=1;i<webOrderHomePage.rowData.size();r++,i++){
+            Row row1 = sheet1.createRow(i);//3
+            for (int c=0;c<webOrderHomePage.getCellDataForRow(r).size();c++){//r=4
+                row1.createCell(c);
+                row1.getCell(c).setCellValue(webOrderHomePage.getCellDataForRow(r).get(c).getText());
+            }
+        }
+
+
         FileOutputStream fileOutputStream = new FileOutputStream(path);
         workbook.write(fileOutputStream);
         workbook.close();
@@ -196,6 +205,14 @@ public class WebOrderHomePageStep {
     }
 
     @Then("user validates last record in excel sheet")
-    public void userValidatesLastRecordInExcelSheet() {
+    public void userValidatesLastRecordInExcelSheet() throws IOException {
+        String path ="/Users/techtorialacademy/IdeaProjects/Cucumber-Spark-Report/src/test/resources/data/WebOrderList.xlsx";
+        File excelFile = new File(path);
+        FileInputStream fileInputStream = new FileInputStream(excelFile);
+        Workbook workbook = new XSSFWorkbook(fileInputStream);
+        Sheet sheet1 = workbook.getSheet("Sheet1");
+
+        Assert.assertEquals("Clare Jefferson",sheet1.getRow(sheet1.getLastRowNum()).getCell(0).toString());
+
     }
 }
