@@ -75,6 +75,7 @@ public class FootballApiCompetitions {
     @Test
     public void getCompetitionsGroovy(){//Groovy
         List<String> competitionsList = response.path("competitions.findAll { it.id>=2100}.name");
+        //it means this
         Assert.assertTrue(competitionsList.contains("Puchar Polski"));
 
         List<String> competitionListMexico = response.path("competitions.findAll { it.area.name=='Mexico'}.name");
