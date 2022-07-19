@@ -59,6 +59,7 @@ public class PostPetUsingPojo {
         pet.put("id",new Random().nextInt(1000));
         pet.put("photoUrls",new String[]{"https://mvnrepository.com/artifact/io.rest-assured/rest-assured/5.1.1", "techtorial.com"});
 
+
         given().spec(requestSpecification).body(pet)
                 .when().post()
                 .then().spec(responseSpecification).log().all(true);
